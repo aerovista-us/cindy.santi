@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="600" viewBox="0 0 1600 600">
+  <rect width="100%" height="100%" fill="none"/>
+  <g transform="translate(80,80)">
+    <circle cx="120" cy="120" r="100" fill="#f2e8df" stroke="#2b8c7a" stroke-width="2"/>
+    <path d="M120 80 C130 70, 150 70, 150 86 C150 100, 142 104, 120 104 C98 104, 90 100, 90 86 C90 70, 110 70, 120 80 Z" fill="#2b8c7a"/>
+    <path d="M95 140 C110 120, 140 118, 165 140" stroke="#222222" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M60 170 C90 150, 150 160, 190 150" stroke="#74c6ab" stroke-width="2" fill="none"/>
+  </g>
+  <g transform="translate(260,170)">
+    <text x="0" y="0" font-family="Verdana, Arial, sans-serif" font-size="60" fill="#222222" font-weight="700">Cindy Santi</text>
+    <text x="0" y="38" font-family="Verdana, Arial, sans-serif" font-size="14" fill="#2b8c7a">Coaching • Retreats • Workshops</text>
+  </g>
+</svg>
