@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1200" viewBox="0 0 200 120">
+  <defs>
+    <radialGradient id="rg1" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#74c6ab" stop-opacity="0.98"/>
+      <stop offset="55%" stop-color="#2b8c7a" stop-opacity="0.98"/>
+      <stop offset="100%" stop-color="#174a3c" stop-opacity="0.98"/>
+    </radialGradient>
+    <linearGradient id="lg1" x1="0" x2="1">
+      <stop offset="0" stop-color="#74c6ab" />
+      <stop offset="1" stop-color="#2b8c7a" />
+    </linearGradient>
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Transparent background -->
+  <rect width="100%" height="100%" fill="none"/>
+
+  <!-- LEFT: Rich emblem artwork -->
+  <g transform="translate(12,10)">
+    <!-- Layered circular background with gradient -->
+    <circle cx="38" cy="44" r="34" fill="url(#rg1)" filter="url(#softShadow)"/>
+
+    <!-- Subtle radial lines (rays) for energy -->
+    <g opacity="0.08" stroke="#ffffff" stroke-width="0.6" stroke-linecap="round">
+      <path d="M38 8 L38 0" transform="rotate(18 38 44)"/>
+      <path d="M38 8 L38 0" transform="rotate(36 38 44)"/>
+      <path d="M38 8 L38 0" transform="rotate(54 38 44)"/>
+      <path d="M38 8 L38 0" transform="rotate(72 38 44)"/>
+      <path d="M38 8 L38 0" transform="rotate(90 38 44)"/>
+      <path d="M38 8 L38 0" transform="rotate(108 38 44)"/>
+      <path d="M38 8 L38 0" transform="rotate(126 38 44)"/>
+      <path d="M38 8 L38 0" transform="rotate(144 38 44)"/>
+    </g>
+
+    <!-- Abstract uplift figure (left-leaning, open arms) -->
+    <g transform="translate(-2,0)">
+      <!-- halo / head -->
+      <circle cx="38" cy="28" r="5.2" fill="#f2e8df" stroke="#ffffff" stroke-width="0.6" />
+      <!-- torso -->
+      <path d="M36 36 C34 44, 48 46, 50 56 C46 58, 40 56, 36 56 C28 56, 26 50, 30 44"
+            fill="#f2e8df" opacity="0.95" stroke="#ffffff" stroke-width="0.4"/>
+      <!-- left arm uplift -->
+      <path d="M29 36 C22 30, 18 22, 22 16" stroke="#ffffff" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <!-- right arm supportive curve -->
+      <path d="M47 36 C56 28, 66 26, 74 30" stroke="#ffffff" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.9"/>
+    </g>
+
+    <!-- Flowing wave ribbons (symbolic of transformation) -->
+    <path d="M8 78 C22 64, 46 74, 60 68" stroke="#ffffff" stroke-width="1.6" fill="none" opacity="0.18" stroke-linecap="round"/>
+    <path d="M6 84 C22 72, 46 80, 66 76" stroke="#f2e8df" stroke-width="1.6" fill="none" opacity="0.28" stroke-linecap="round"/>
+    <path d="M4 90 C28 78, 52 86, 74 82" stroke="#74c6ab" stroke-width="1.8" fill="none" opacity="0.9" stroke-linecap="round"/>
+  </g>
+
+  <!-- RIGHT: Wordmark (Cindy Santi kept together) -->
+  <g transform="translate(90,40)">
+    <text x="0" y="8" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="#222222" font-weight="700">Cindy Santi</text>
+    <text x="0" y="28" font-family="Verdana, Arial, sans-serif" font-size="9.5" fill="#2b8c7a" letter-spacing="1.2">Coach • Retreats • Workshops</text>
+  </g>
+</svg>

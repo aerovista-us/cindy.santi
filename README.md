@@ -2,6 +2,8 @@
 
 **Guiding transformation** — Customer-facing sales presentation and complimentary brand assets for Cindy Santi's coaching launch.
 
+**Offer:** Pro — Lean | $3,000 | Launch target May 1, 2026 | Goal: 5 consultations + 3 sign-ups in 30 days
+
 ---
 
 ## Quick Start
@@ -15,10 +17,9 @@
 | Deliverable | Description |
 |-------------|-------------|
 | **Demo Website** | Single-page responsive launch site with hero, about, services, pricing, intake form, and contact |
-| **Logo Suite** | Wordmark, monogram, emblem — SVG + PNG (512, 1200×630, favicon) |
-| **Logo Concepts** | Alternative concepts (logo_concept_1.svg, logo_concept_2.svg) |
+| **Logo** | Primary emblem (cindy_upgraded_emblem_v2_fixed.svg) — Cindy Santi • Coach • Retreats • Workshops |
 | **Flyers** | Promotional flyers for Steward Camp and events |
-| **Documents** | Proposal (PDF/TXT), coaching agreement template (PDF/TXT), pricing data (JSON) |
+| **Documents** | Proposal (PDF), coaching agreement template (PDF) |
 
 ---
 
@@ -28,15 +29,11 @@
 ├── index.html              ← Sales presentation (start here)
 ├── cindy_homepage_index.html   Demo website
 ├── flyer.png, flyer2.png       Complimentary flyers
-├── logo_concept_1.svg, logo_concept_2.svg
+├── cindy_upgraded_emblem_v2_fixed.svg
 ├── pricing_products.json
 ├── proposal_cindy_santi.pdf
 ├── coaching_agreement_cindy_santi.pdf
-├── logos/
-│   ├── cindy_upgraded_wordmark.svg
-│   ├── cindy_upgraded_monogram.svg
-│   ├── cindy_upgraded_emblem.svg
-│   └── [PNG variants: _512, _1200x630, _favicon]
+├── logos/                    (legacy assets)
 └── docs/
     └── demo-site.md        Technical notes
 ```

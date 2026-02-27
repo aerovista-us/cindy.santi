@@ -1,7 +1,8 @@
 # Cindy Santi — Demo Site & Sales Presentation
 
 ## Sales Presentation Package
-- **index.html** — Customer-facing presentation with download links for all assets (demo site, logos, flyers, documents)
+- **index.html** — Customer-facing presentation with download links (demo site, logo, flyers, documents) and **Pro Lean offer** ($3,000, scope, timeline)
+- **Logo** — cindy_upgraded_emblem_v2_fixed.svg (primary emblem; replaces prior logo suite)
 - **README.md** — GitHub repo overview and quick start
 - **.gitignore** — Standard exclusions for GitHub upload
 - See README for GitHub Pages deployment.

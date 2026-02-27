@@ -156,6 +156,47 @@
     .doc-list a strong { flex: 1; }
     .doc-list a .format { font-size: 0.8rem; color: var(--color-teal); }
 
+    .offer-box {
+      background: var(--color-warm-cream);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      margin-top: 1rem;
+      border-left: 4px solid var(--color-teal);
+    }
+    .offer-box ul { margin: 0.5rem 0 1rem 1.25rem; padding: 0; }
+    .offer-box li { margin-bottom: 0.35rem; color: var(--color-muted); }
+    .offer-box p { margin: 0 0 0.5rem; }
+    .offer-box p:last-child { margin-bottom: 0; margin-top: 1rem; font-size: 0.95rem; color: var(--color-muted); }
+
+    .intro-letter {
+      background: #faf8f6;
+      border: 1px solid rgba(43,140,122,0.2);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      font-size: 0.85rem;
+      line-height: 1.55;
+      color: var(--color-muted);
+      margin-bottom: 2rem;
+    }
+    .intro-letter .letter-head {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-teal);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .intro-letter .letter-meta { font-size: 0.8rem; margin-bottom: 0.75rem; opacity: 0.9; }
+    .intro-letter p { margin: 0 0 0.5rem; }
+    .intro-letter .snapshot {
+      margin-top: 0.75rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid rgba(43,140,122,0.15);
+      font-size: 0.8rem;
+    }
+    .intro-letter .snapshot strong { color: var(--color-dark); }
+    .intro-letter .sign-off { margin-top: 0.75rem; font-size: 0.8rem; }
+
     footer {
       text-align: center;
       padding: 2rem 1.5rem;
@@ -169,12 +210,43 @@
 </head>
 <body>
   <header class="page-header">
+    <img src="cindy_upgraded_emblem_v2_fixed.svg" alt="Cindy Santi — Coach • Retreats • Workshops" style="height:64px;width:auto;margin-bottom:1rem;">
     <h1>Launch Package — Cindy Santi</h1>
-    <p class="subtitle">Guiding transformation</p>
+    <p class="subtitle">Pro — Lean | $3,000 | Launch target May 1, 2026</p>
     <p>Your customer-facing sales presentation and complimentary brand assets. All deliverables are ready for download and use.</p>
   </header>
 
   <main>
+    <div class="intro-letter">
+      <div class="letter-head">Complimentary Logo Sample &amp; Recommended Launch Package</div>
+      <div class="letter-meta">To: Cindy Santi &nbsp;•&nbsp; From: AeroVista LLC &nbsp;•&nbsp; February 26, 2026</div>
+      <p>Thank you for sharing your intake and for trusting AeroVista LLC to help bring your coaching practice to life. Your experience, clarity, and commitment to helping people break free from conditioning really come through.</p>
+      <p>Below is a complimentary logo sample and short guidance you can use immediately across web and social. Use it as-is for web, social, and print — or tell us which concept you want refined into a full brand kit.</p>
+      <div class="snapshot">
+        <p><strong>Offer snapshot:</strong> Goal: 5 consultations and 3 paid sign-ups within 30 days of launch. Package: Pro — Lean ($3,000). Next step: Sign-off + 50% deposit ($1,500) to reserve schedule and kickoff.</p>
+        <p><strong>Quick deliverables:</strong> Responsive single-page starter with booking placeholder • pricing_products.json • proposal + coaching agreement • automations (booking → intake → confirmation → reminders) • complimentary logo samples + upgraded emblem • toolkit (intake, invoice, SOP, onboarding, email templates).</p>
+      </div>
+      <div class="sign-off">Prepared by: AeroVista LLC • <a href="mailto:hello@aerovista.us" style="color:var(--color-teal);">hello@aerovista.us</a></div>
+    </div>
+
+    <section class="section" id="offer">
+      <h2>The Offer — Pro Lean</h2>
+      <p><strong>$3,000 (USD)</strong> — 50% deposit at signing ($1,500), 50% on delivery ($1,500). Launch target: <strong>May 1, 2026</strong>.</p>
+      <p><strong>Goal:</strong> 5 consultations and 3 paid sign-ups within the first 30 days after launch.</p>
+      <div class="offer-box">
+        <p><strong>Included:</strong></p>
+        <ul>
+          <li>Responsive single-page website (Home / Services / Booking / Intake / Policies)</li>
+          <li>Booking integration (Square Appointments or Calendly) + intake form</li>
+          <li>Pricing products JSON + proposal &amp; coaching agreement (PDF)</li>
+          <li>Logo assets (SVG) + toolkit templates (intake, proposal, invoice, onboarding checklist, SOP outline)</li>
+          <li>5 email templates (confirmation, reminders, follow-up, upsell, onboarding)</li>
+          <li>KPI tracker + launch checklist + QA pass on booking &amp; checkout</li>
+        </ul>
+        <p><strong>Not included:</strong> Full branding suites, long-form content, paid ad spend, retreat registration platform — available as add-ons.</p>
+      </div>
+    </section>
+
     <section class="section">
       <h2>Demo Website</h2>
       <p>Single-page responsive launch site showcasing coaching offerings, pricing, intake form, and CTAs. Built with your brand colors, friendly tone, and optimized for leads and bookings.</p>
@@ -189,59 +261,17 @@
     </section>
 
     <section class="section">
-      <h2>Logo Suite</h2>
-      <p>Complimentary logo assets in SVG (scalable) and PNG formats. Use across web, print, and social.</p>
+      <h2>Logo</h2>
+      <p>Primary emblem — Cindy Santi with Coach • Retreats • Workshops. Scalable SVG for web, print, and social.</p>
       <div class="card-grid">
-        <div class="asset-card">
-          <div class="thumb">
-            <img src="logos/cindy_upgraded_wordmark.svg" alt="Wordmark" style="max-width:90%;max-height:90%;object-fit:contain;">
+        <div class="asset-card" style="max-width:280px;">
+          <div class="thumb" style="aspect-ratio: 2.33/1;">
+            <img src="cindy_upgraded_emblem_v2_fixed.svg" alt="Cindy Santi Emblem" style="max-width:95%;max-height:95%;object-fit:contain;">
           </div>
-          <h3>Wordmark</h3>
-          <p class="meta">Cindy Santi + tagline</p>
+          <h3>Emblem (primary)</h3>
+          <p class="meta">SVG • scalable</p>
           <div class="links">
-            <a href="logos/cindy_upgraded_wordmark.svg" download class="dl">SVG</a>
-            <a href="logos/wordmark_512.png" download class="dl">PNG 512</a>
-            <a href="logos/wordmark_1200x630.png" download class="dl">PNG 1200×630</a>
-          </div>
-        </div>
-        <div class="asset-card">
-          <div class="thumb">
-            <img src="logos/cindy_upgraded_monogram.svg" alt="Monogram" style="max-width:90%;max-height:90%;object-fit:contain;">
-          </div>
-          <h3>Monogram (CS)</h3>
-          <p class="meta">Icon / favicon</p>
-          <div class="links">
-            <a href="logos/cindy_upgraded_monogram.svg" download class="dl">SVG</a>
-            <a href="logos/monogram_512.png" download class="dl">PNG 512</a>
-            <a href="logos/monogram_favicon.png" download class="dl">Favicon</a>
-          </div>
-        </div>
-        <div class="asset-card">
-          <div class="thumb">
-            <img src="logos/cindy_upgraded_emblem.svg" alt="Emblem" style="max-width:90%;max-height:90%;object-fit:contain;">
-          </div>
-          <h3>Emblem</h3>
-          <p class="meta">Coaching • Retreats • Workshops</p>
-          <div class="links">
-            <a href="logos/cindy_upgraded_emblem.svg" download class="dl">SVG</a>
-            <a href="logos/emblem_512.png" download class="dl">PNG 512</a>
-            <a href="logos/emblem_1200x630.png" download class="dl">PNG 1200×630</a>
-          </div>
-        </div>
-        <div class="asset-card">
-          <div class="thumb"><img src="logo_concept_1.svg" alt="Concept 1" width="80" height="80" style="max-width:80%;max-height:80%;object-fit:contain;"></div>
-          <h3>Concept 1</h3>
-          <p class="meta">Alternative</p>
-          <div class="links">
-            <a href="logo_concept_1.svg" download class="dl">SVG</a>
-          </div>
-        </div>
-        <div class="asset-card">
-          <div class="thumb"><img src="logo_concept_2.svg" alt="Concept 2" width="80" height="80" style="max-width:80%;max-height:80%;object-fit:contain;"></div>
-          <h3>Concept 2</h3>
-          <p class="meta">Alternative</p>
-          <div class="links">
-            <a href="logo_concept_2.svg" download class="dl">SVG</a>
+            <a href="cindy_upgraded_emblem_v2_fixed.svg" download class="dl">↓ Download SVG</a>
           </div>
         </div>
       </div>
