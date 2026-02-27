@@ -1,0 +1,42 @@
+[
+  {
+    "sku": "consultation_33",
+    "title": "Consultation",
+    "price_cents": 3300,
+    "currency": "USD",
+    "duration_minutes": 30,
+    "description": "Introductory consultation"
+  },
+  {
+    "sku": "single_75",
+    "title": "Single Session (45min)",
+    "price_cents": 7500,
+    "currency": "USD",
+    "duration_minutes": 45,
+    "description": "One 45-minute session"
+  },
+  {
+    "sku": "1month_272",
+    "title": "1 Month \u2014 Prepaid (4 weekly sessions)",
+    "price_cents": 27200,
+    "currency": "USD",
+    "duration_minutes": 45,
+    "description": "Four weekly sessions, prepaid"
+  },
+  {
+    "sku": "3month_720",
+    "title": "3 Month \u2014 Prepaid (12 weekly sessions)",
+    "price_cents": 72000,
+    "currency": "USD",
+    "duration_minutes": 45,
+    "description": "Twelve weekly sessions, prepaid"
+  },
+  {
+    "sku": "6month_2880",
+    "title": "6-Month Intensive",
+    "price_cents": 288000,
+    "currency": "USD",
+    "duration_minutes": 45,
+    "description": "2x weekly 45-min sessions, includes 3-day retreat (retreat logistics TBA)"
+  }
+]

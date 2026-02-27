@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Cindy Santi — Guiding Transformation | Coaching, Retreats & Workshops</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-teal: #2b8c7a;
+      --color-teal-light: #74c6ab;
+      --color-dark: #1a1a1a;
+      --color-warm-cream: #f2e8df;
+      --color-sand: #e8ddd2;
+      --color-muted: #5c5c5c;
+      --font-display: 'Crimson Pro', Georgia, serif;
+      --font-body: 'Source Sans 3', Verdana, sans-serif;
+      --radius: 12px;
+      --shadow: 0 4px 24px rgba(43,140,122,0.12);
+      --shadow-lg: 0 12px 48px rgba(0,0,0,0.08);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: var(--color-dark);
+      background: #fff;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2rem 1.5rem 4rem;
+      background: linear-gradient(165deg, var(--color-warm-cream) 0%, #fff 45%, var(--color-sand) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -15%;
+      width: 60%;
+      height: 80%;
+      background: radial-gradient(ellipse, rgba(43,140,122,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-content { position: relative; max-width: 720px; }
+    .hero-logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .hero-logo svg { height: 48px; width: auto; }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-weight: 600;
+      line-height: 1.2;
+      margin: 0 0 0.75rem;
+      color: var(--color-dark);
+    }
+    .hero .tagline {
+      font-size: 1.15rem;
+      color: var(--color-teal);
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--color-muted);
+      max-width: 540px;
+      margin: 0 0 2rem;
+    }
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 1.75rem;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: var(--radius);
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+    .btn-primary {
+      background: var(--color-teal);
+      color: #fff;
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--color-teal);
+      border: 2px solid var(--color-teal);
+    }
+
+    /* Section common */
+    section {
+      padding: 4rem 1.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      font-weight: 600;
+      margin: 0 0 0.5rem;
+      color: var(--color-dark);
+    }
+    section .section-tag {
+      font-size: 0.9rem;
+      color: var(--color-teal);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+    }
+
+    /* About */
+    .about {
+      background: #fff;
+    }
+    .about p { margin: 0 0 1rem; color: var(--color-muted); }
+    .differentiator {
+      margin-top: 1.5rem;
+      padding: 1.5rem;
+      background: var(--color-warm-cream);
+      border-radius: var(--radius);
+      border-left: 4px solid var(--color-teal);
+    }
+    .differentiator p { margin: 0; color: var(--color-dark); font-style: italic; }
+
+    /* Services */
+    .services { background: var(--color-warm-cream); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+    .service-card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .service-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      margin: 0 0 0.5rem;
+      color: var(--color-teal);
+    }
+    .service-card p { margin: 0; font-size: 0.95rem; color: var(--color-muted); }
+    .delivery-modes {
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .delivery-modes span {
+      padding: 0.4rem 0.9rem;
+      background: #fff;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--color-teal);
+      box-shadow: 0 2px 8px rgba(43,140,122,0.15);
+    }
+
+    /* Pricing */
+    .pricing { background: #fff; }
+    .pricing-grid {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .price-card {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--color-warm-cream);
+      border-radius: var(--radius);
+      border: 1px solid rgba(43,140,122,0.2);
+    }
+    .price-card.featured {
+      background: linear-gradient(135deg, rgba(43,140,122,0.12) 0%, var(--color-warm-cream) 100%);
+      border-color: var(--color-teal);
+    }
+    .price-card h3 { margin: 0; font-size: 1.1rem; font-family: var(--font-body); }
+    .price-card .desc { font-size: 0.9rem; color: var(--color-muted); margin: 0.25rem 0 0; }
+    .price-card .amount { font-size: 1.35rem; font-weight: 700; color: var(--color-teal); }
+    .price-card .badge { font-size: 0.75rem; background: var(--color-teal); color: #fff; padding: 0.2rem 0.5rem; border-radius: 4px; }
+
+    /* Process */
+    .process { background: var(--color-sand); }
+    .process-steps {
+      margin-top: 1.5rem;
+      display: grid;
+      gap: 1rem;
+    }
+    .process-step {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .process-step .num {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      background: var(--color-teal);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+    .process-step h3 { margin: 0 0 0.25rem; font-size: 1.05rem; }
+    .process-step p { margin: 0; font-size: 0.95rem; color: var(--color-muted); }
+
+    /* Intake */
+    .intake { background: #fff; }
+    .intake-intro { margin-bottom: 1.5rem; color: var(--color-muted); }
+    .intake-form {
+      max-width: 560px;
+      display: grid;
+      gap: 1rem;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 0.35rem;
+      color: var(--color-dark);
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.7rem 0.9rem;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #fff;
+    }
+    .form-group textarea { min-height: 100px; resize: vertical; }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--color-teal);
+      box-shadow: 0 0 0 3px rgba(43,140,122,0.15);
+    }
+
+    /* Contact / Footer */
+    footer {
+      background: var(--color-dark);
+      color: #fff;
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+    footer a { color: var(--color-teal-light); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .footer-logo {
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+    .footer-logo svg { height: 32px; width: auto; }
+    footer p { margin: 0.5rem 0; font-size: 0.95rem; opacity: 0.85; }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <div class="hero-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 1600 600">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#2b8c7a"/><stop offset="1" stop-color="#74c6ab"/></linearGradient>
+          </defs>
+          <rect x="0" y="0" width="320" height="320" rx="40" fill="#f2e8df"/>
+          <circle cx="160" cy="160" r="120" fill="url(#g1)"/>
+          <text x="160" y="185" font-size="120" font-family="Verdana,sans-serif" font-weight="700" fill="#fff" text-anchor="middle">CS</text>
+        </svg>
+        <span style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 600;">Cindy Santi</span>
+      </div>
+      <h1>Guide &amp; Coach for Real-Life Transformation</h1>
+      <p class="tagline">Guiding transformation</p>
+      <p>Break free from conditioning. Reclaim clarity, purpose, and strength — mental, emotional, and physical guidance rooted in decades of practice. See reality clearly and embrace life's essence.</p>
+      <div class="cta-row">
+        <a href="#pricing" class="btn btn-primary">View Offerings</a>
+        <a href="#intake" class="btn btn-secondary">Start with Intake</a>
+        <a href="#contact" class="btn btn-secondary">Book a Consultation</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="about">
+    <span class="section-tag">About</span>
+    <h2>Decades of Seeing &amp; Breaking Through</h2>
+    <p>Human development — mental, emotional, and physical. I guide you through life's challenges and help you break out of conditioning and dogma. The goal: see reality clearly and embrace life's essence.</p>
+    <p>Coaching, lectures, talks, and teaching — delivered with warmth and practicality. Sessions via Zoom, in-person in Idaho, or at retreats.</p>
+    <div class="differentiator">
+      <p>70 years of experience in seeing conditioning, resisting it, and self-educating. I've gathered, simulated, and activated the tools for liberation and fulfillment — and I'm here to share them with you.</p>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <span class="section-tag">What I Offer</span>
+    <h2>Mental, Emotional &amp; Physical Guidance</h2>
+    <p>One-on-one coaching and group experiences tailored to where you are. Ideal for adults 30–75 who are ready to examine their conditioning and step into clarity.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>One-on-One Coaching</h3>
+        <p>Personalized sessions focused on your growth, challenges, and goals.</p>
+      </div>
+      <div class="service-card">
+        <h3>Retreats</h3>
+        <p>Intensive 3-day experiences for deeper breakthrough work.</p>
+      </div>
+      <div class="service-card">
+        <h3>Talks &amp; Workshops</h3>
+        <p>Lectures and group sessions on conditioning, liberation, and fulfillment.</p>
+      </div>
+    </div>
+    <p style="margin-top: 1.5rem; font-size: 0.95rem; color: var(--color-muted);">Delivery modes:</p>
+    <div class="delivery-modes">
+      <span>Zoom</span>
+      <span>In-Person (Idaho)</span>
+      <span>Retreats</span>
+    </div>
+  </section>
+
+  <section id="pricing" class="pricing">
+    <span class="section-tag">Pricing</span>
+    <h2>Session Packages</h2>
+    <p>Start with a consultation or jump into a package. Prepaid packages offer the best value.</p>
+    <div class="pricing-grid" id="pricing-grid">
+      <!-- Populated by JS from pricing_products.json -->
+    </div>
+  </section>
+
+  <section id="process" class="process">
+    <span class="section-tag">How It Works</span>
+    <h2>Simple Path to Transformation</h2>
+    <div class="process-steps">
+      <div class="process-step">
+        <span class="num">1</span>
+        <div>
+          <h3>Book a Consultation</h3>
+          <p>30-minute intro call to explore fit and answer questions. $33.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="num">2</span>
+        <div>
+          <h3>Complete Intake</h3>
+          <p>Share your goals, challenges, and what you're ready for.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="num">3</span>
+        <div>
+          <h3>Choose Your Path</h3>
+          <p>Single sessions, monthly, or intensive packages. Prepaid for commitment.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="num">4</span>
+        <div>
+          <h3>Show Up &amp; Transform</h3>
+          <p>Weekly sessions via Zoom or in-person. Retreat options for deeper work.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="intake" class="intake">
+    <span class="section-tag">Get Started</span>
+    <h2>Client Intake Form</h2>
+    <p class="intake-intro">Ready to begin? Share a bit about yourself. Your responses help tailor our work together. Submitting this form does not obligate you to book.</p>
+    <form class="intake-form" id="intake-form" action="#" method="post">
+      <div class="form-group">
+        <label for="name">Full name *</label>
+        <input type="text" id="name" name="name" required placeholder="Your name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com">
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+      </div>
+      <div class="form-group">
+        <label for="timezone">Timezone</label>
+        <input type="text" id="timezone" name="timezone" placeholder="e.g. Mountain Time (US)">
+      </div>
+      <div class="form-group">
+        <label for="interest">What draws you to coaching right now? *</label>
+        <textarea id="interest" name="interest" required placeholder="What challenges or goals bring you here? What are you hoping to shift or clarify?"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="package">Which offering interests you most?</label>
+        <select id="package" name="package">
+          <option value="">— Select —</option>
+          <option value="consultation">Consultation ($33)</option>
+          <option value="single">Single Session ($75)</option>
+          <option value="1month">1 Month Prepaid ($272)</option>
+          <option value="3month">3 Month Prepaid ($720)</option>
+          <option value="6month">6-Month Intensive ($2,880)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="notes">Anything else you'd like me to know?</label>
+        <textarea id="notes" name="notes" placeholder="Preferences, availability, questions…"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit Intake</button>
+    </form>
+  </section>
+
+  <footer id="contact">
+    <div class="footer-logo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 1600 600">
+        <defs><linearGradient id="gf" x1="0" x2="1"><stop offset="0" stop-color="#2b8c7a"/><stop offset="1" stop-color="#74c6ab"/></linearGradient></defs>
+        <circle cx="160" cy="160" r="120" fill="url(#gf)"/>
+        <text x="160" y="185" font-size="120" font-family="Verdana,sans-serif" font-weight="700" fill="#fff" text-anchor="middle">CS</text>
+      </svg>
+    </div>
+    <p><strong>Cindy Santi</strong> — Guiding transformation</p>
+    <p><a href="mailto:cindyissanti@gmail.com">cindyissanti@gmail.com</a></p>
+    <p>Coaching • Retreats • Workshops | Zoom &amp; In-Person (Idaho)</p>
+  </footer>
+
+  <script>
+    // Load pricing from JSON
+    fetch('pricing_products.json')
+      .then(r => r.json())
+      .then(products => {
+        const grid = document.getElementById('pricing-grid');
+        if (!grid) return;
+        const featuredSkus = ['1month_272', '3month_720'];
+        products.forEach(p => {
+          const amt = (p.price_cents / 100).toLocaleString('en-US', { style: 'currency', currency: p.currency || 'USD' });
+          const card = document.createElement('div');
+          card.className = 'price-card' + (featuredSkus.includes(p.sku) ? ' featured' : '');
+          card.innerHTML = `
+            <div>
+              <h3>${p.title}${p.sku === 'consultation_33' ? ' <span class="badge">Start here</span>' : ''}</h3>
+              <p class="desc">${p.description}${p.duration_minutes ? ' • ' + p.duration_minutes + ' min' : ''}</p>
+            </div>
+            <div class="amount">${amt}</div>
+          `;
+          grid.appendChild(card);
+        });
+      })
+      .catch(() => {
+        // Fallback if JSON fails
+        const grid = document.getElementById('pricing-grid');
+        if (grid) grid.innerHTML = '<p>Consultation $33 • Single Session $75 • Packages from $272. <a href="mailto:cindyissanti@gmail.com">Email for details</a>.</p>';
+      });
+
+    // Intake form submit (demo — would hook to backend/Formspree/etc.)
+    document.getElementById('intake-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Demo only — This form is not connected to a backend. In production, submissions would be sent to Cindy and trigger follow-up. For real inquiries, email cindyissanti@gmail.com directly.');
+    });
+  </script>
+</body>
+</html>

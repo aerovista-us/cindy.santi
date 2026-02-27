@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="400" viewBox="0 0 1600 400">
+  <rect width="100%" height="100%" fill="none"/>
+  <g transform="translate(40,40)">
+    <text x="0" y="80" font-family="Georgia, serif" font-size="96" fill="#222222" font-weight="700">Cindy Santi</text>
+    <path d="M2 108 C140 140, 420 122, 740 108" stroke="#74c6ab" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <text x="0" y="140" font-family="Verdana, Arial, sans-serif" font-size="18" fill="#2b8c7a">Guiding transformation</text>
+  </g>
+</svg>

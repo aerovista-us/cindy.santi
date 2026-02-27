@@ -1,0 +1,21 @@
+Proposal: Launch Package — Biz'n'Box for Cindy Santi
+Prepared: 2026-02-26
+
+Client: Cindy Santi
+Project: Launch Kit — Coaching services (Human development: mental, emotional, physical)
+Goal: Generate 5 consultations and 3 paid sign-ups within 30 days of launch (May 1, 2026)
+
+Scope of work:
+- Single-page responsive launch site
+- Booking integration (Square or Calendly) + test appointment
+- Payment checkout pages for pricing packages
+- Intake form / embedded form link
+- Proposal & Invoice templates
+- Coaching contract template
+- Email automation sequences (5 templates)
+- SOPs: session delivery, onboarding checklist
+- KPI tracker (Google Sheet template)
+
+Budget estimate:
+Lean Pro: $3,000
+Full Pro: $5,000 - $7,000
