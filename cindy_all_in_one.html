@@ -1,0 +1,785 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cindy Santi — All-in-one Brand, Pages & Tools</title>
+  <meta name="description" content="Single-source overview of Cindy Santi’s brand kit, homepages, Awakening Path, offers, agreement text, and tools for Cindy and developers." />
+  <style>
+    :root {
+      --sage:#2F6F63;
+      --forest:#2E5E4E;
+      --earth:#8B5E3C;
+      --gold:#D8A34A;
+      --coral:#C7644F;
+      --cream:#f4efe7;
+      --paper:#ffffff;
+      --ink:#26211d;
+      --muted:#6d645b;
+      --line:#e5ddd2;
+      --radius-lg:22px;
+      --radius:14px;
+      --shadow-soft:0 10px 26px rgba(0,0,0,.08);
+    }
+    *{box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(900px 320px at 10% -5%, rgba(47,111,99,.08), transparent 60%),
+        radial-gradient(700px 260px at 90% 0%, rgba(199,100,79,.06), transparent 55%),
+        linear-gradient(180deg,#f8f3ec,var(--cream));
+    }
+    a{color:var(--sage);}
+    .wrap{
+      max-width:1180px;
+      margin:0 auto;
+      padding:22px 18px 80px;
+    }
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-bottom:18px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:900;
+    }
+    .mark{
+      width:48px;
+      height:48px;
+      border-radius:16px;
+      position:relative;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,.55), transparent 30%),
+        radial-gradient(circle at 75% 80%, rgba(216,163,74,.45), transparent 26%),
+        linear-gradient(135deg,var(--sage),#59a79c 56%,#d8a34a 140%);
+      box-shadow:0 10px 24px rgba(47,111,99,.22);
+    }
+    .mark:before{
+      content:"";
+      position:absolute;
+      inset:10px 14px 16px;
+      border:2px solid rgba(255,255,255,.72);
+      border-radius:999px 999px 55% 55%;
+      transform:rotate(-8deg);
+    }
+    .brand small{
+      display:block;
+      color:var(--muted);
+      font-weight:700;
+      font-size:12px;
+    }
+    .tagline{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:4px;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      padding:5px 9px;
+      border-radius:999px;
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      background:rgba(47,111,99,.12);
+      color:var(--sage);
+    }
+    .pill.dev{
+      background:rgba(38,33,29,.08);
+      color:var(--earth);
+    }
+    .frame{
+      border-radius:var(--radius-lg);
+      border:1px solid rgba(255,255,255,.9);
+      background:rgba(255,255,255,.7);
+      box-shadow:var(--shadow-soft);
+      backdrop-filter:blur(7px);
+      padding:18px 18px 14px;
+      margin-bottom:14px;
+    }
+    .frame h1{
+      margin:8px 0 4px;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:32px;
+      letter-spacing:-.02em;
+      color:var(--sage);
+    }
+    .frame p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .chip-row{
+      margin-top:10px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      font-size:11px;
+      color:var(--muted);
+    }
+    /* Tabs */
+    .tabs{
+      margin-top:14px;
+      border-radius:var(--radius-lg);
+      background:rgba(255,255,255,.9);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow-soft);
+      overflow:hidden;
+    }
+    .tab-list{
+      display:flex;
+      flex-wrap:wrap;
+      gap:6px;
+      padding:10px 10px 6px;
+      border-bottom:1px solid var(--line);
+      background:linear-gradient(90deg,rgba(244,239,231,.9),rgba(255,255,255,1));
+    }
+    .tab-btn{
+      border:1px solid transparent;
+      border-radius:999px;
+      padding:7px 11px;
+      font-size:12px;
+      font-weight:700;
+      background:transparent;
+      color:var(--muted);
+      cursor:pointer;
+      display:inline-flex;
+      align-items:center;
+      gap:4px;
+    }
+    .tab-btn span.dot{
+      width:6px;
+      height:6px;
+      border-radius:50%;
+      background:rgba(47,111,99,.45);
+    }
+    .tab-btn.active{
+      background:#fff;
+      color:var(--sage);
+      border-color:rgba(47,111,99,.45);
+      box-shadow:0 6px 14px rgba(0,0,0,.06);
+    }
+    .tab-btn[aria-label*="Devs"]{
+      font-style:italic;
+    }
+    .tab-panels{
+      padding:18px 18px 20px;
+    }
+    .tab-panel{
+      display:none;
+    }
+    .tab-panel.active{
+      display:block;
+    }
+    /* Common content styles */
+    h2{
+      margin:0 0 8px;
+      font-size:20px;
+      font-family:Georgia,"Times New Roman",serif;
+      letter-spacing:.01em;
+    }
+    h3{
+      margin:0 0 6px;
+      font-size:16px;
+    }
+    p{
+      margin:0 0 8px;
+      color:var(--muted);
+      font-size:14px;
+    }
+    ul{
+      margin:6px 0 10px 18px;
+      padding:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+    li{margin-bottom:4px;}
+    .grid-2{
+      display:grid;
+      grid-template-columns:1.1fr 1fr;
+      gap:14px;
+    }
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:12px;
+    }
+    @media (max-width:900px){
+      .grid-2,
+      .grid-3{grid-template-columns:1fr;}
+    }
+    .card{
+      border-radius:var(--radius);
+      border:1px solid var(--line);
+      background:#fff;
+      padding:14px 14px 12px;
+      box-shadow:0 8px 18px rgba(0,0,0,.04);
+    }
+    .card.dev{
+      background:linear-gradient(135deg,#fff, #f7f1e6);
+    }
+    .badge-row{
+      display:flex;
+      gap:6px;
+      flex-wrap:wrap;
+      margin-bottom:6px;
+    }
+    .badge{
+      font-size:11px;
+      padding:3px 7px;
+      border-radius:999px;
+      background:rgba(47,111,99,.09);
+      color:var(--sage);
+      font-weight:700;
+    }
+    .badge.dev{
+      background:rgba(38,33,29,.08);
+      color:var(--earth);
+    }
+    .palette{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+      gap:10px;
+      margin-top:6px;
+    }
+    .swatch{
+      border-radius:12px;
+      padding:10px;
+      color:#fff;
+      font-size:12px;
+      font-weight:700;
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+    }
+    .swatch small{
+      font-weight:500;
+      opacity:.9;
+    }
+    .mono{
+      font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+      font-size:12px;
+      color:#4b463f;
+      background:rgba(250,245,238,.9);
+      border-radius:10px;
+      border:1px dashed var(--line);
+      padding:8px 10px;
+      white-space:pre-line;
+    }
+    .pill-inline{
+      font-size:11px;
+      font-weight:700;
+      padding:2px 6px;
+      border-radius:999px;
+      background:rgba(47,111,99,.08);
+      color:var(--sage);
+    }
+    .pill-inline.dev{
+      background:rgba(38,33,29,.08);
+      color:var(--earth);
+    }
+    .columns{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+    @media (max-width:800px){
+      .columns{grid-template-columns:1fr;}
+    }
+    .agreement{
+      background:#fff;
+      border-radius:var(--radius);
+      border:1px solid var(--line);
+      padding:16px 16px 12px;
+    }
+    .agreement h3{
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:16px;
+    }
+    .small-text{
+      font-size:12px;
+      color:#857b72;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">
+        <div class="mark" aria-hidden="true"></div>
+        <div>
+          <div>Cindy Santi</div>
+          <small>Coaching • Retreats • Workshops</small>
+        </div>
+      </div>
+      <div class="tagline">
+        <span class="pill">All-in-one brand, pages & tools</span>
+      </div>
+    </header>
+
+    <section class="frame">
+      <h1>Working file for Cindy & devs</h1>
+      <p>
+        This single HTML file gathers the brand kit, homepage variants, Awakening Path copy, offers & pricing, coaching agreement text,
+        and internal tools/notes in one place. Use it as a <strong>reference hub</strong>, not as a public-facing page.
+      </p>
+      <div class="chip-row">
+        <span>For Cindy: copy, pricing, agreement text, voice lanes.</span>
+        <span>For devs: paths to source files, brand tokens, assets, tools.</span>
+      </div>
+    </section>
+
+    <section class="tabs" aria-label="Cindy & dev reference">
+      <div class="tab-list" role="tablist">
+        <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-overview" data-tab="overview">
+          <span class="dot"></span>Overview
+        </button>
+        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-brand" data-tab="brand">
+          <span class="dot"></span>Brand Kit
+        </button>
+        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-homepages" data-tab="homepages">
+          <span class="dot"></span>Homepages
+        </button>
+        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-awakening" data-tab="awakening">
+          <span class="dot"></span>Awakening Path
+        </button>
+        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-offers" data-tab="offers">
+          <span class="dot"></span>Offers & Pricing
+        </button>
+        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-agreement" data-tab="agreement">
+          <span class="dot"></span>Coaching Agreement
+        </button>
+        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-tools" data-tab="tools" aria-label="Tools (Devs)">
+          <span class="dot"></span>Tools (Devs)
+        </button>
+      </div>
+      <div class="tab-panels">
+        <!-- Overview -->
+        <section id="panel-overview" class="tab-panel active" role="tabpanel">
+          <div class="grid-2">
+            <div>
+              <h2>How to use this file</h2>
+              <p><span class="pill-inline">For Cindy</span> Read and react to language, offers, and agreement text here before anything ships public.</p>
+              <p><span class="pill-inline dev">For devs</span> Treat this as the source-of-truth for copy, structure, and brand tokens when building real pages/apps.</p>
+              <ul>
+                <li><strong>Brand Kit</strong> — colors, fonts, voice notes, dev tokens.</li>
+                <li><strong>Homepages</strong> — current homepage variants and CTAs.</li>
+                <li><strong>Awakening Path</strong> — deeper/direct voice lane and usage.</li>
+                <li><strong>Offers & Pricing</strong> — packages, delivery modes, notes.</li>
+                <li><strong>Coaching Agreement</strong> — inline text Cindy can read and mark up.</li>
+                <li><strong>Tools (Devs)</strong> — CTA generator, assets, implementation notes.</li>
+              </ul>
+            </div>
+            <div class="card dev">
+              <div class="badge-row">
+                <span class="badge dev">Dev index</span>
+              </div>
+              <h3>Source files this hub summarizes</h3>
+              <ul>
+                <li><code>brand.kit.html</code> — original brand colors, typography, framework.</li>
+                <li><code>index.html</code> — flyer-style homepage with packages & consultation.</li>
+                <li><code>New folder/index.html</code> — brand kit demo and homepage copy.</li>
+                <li><code>New folder/awakening/index.html</code> — Awakening Path concept page.</li>
+                <li><code>fb ready.html</code> — CTA button / Facebook post generator tool.</li>
+                <li><code>coaching_agreement_cindy_santi.pdf</code> — agreement text (mirrored here).</li>
+              </ul>
+              <p class="small-text">
+                When any of the above change, update this working file next so everyone stays aligned.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Brand Kit -->
+        <section id="panel-brand" class="tab-panel" role="tabpanel">
+          <div class="grid-2">
+            <div>
+              <h2>Brand Kit</h2>
+              <p><span class="pill-inline">For Cindy</span> High-level visual system and language that everything else pulls from.</p>
+              <p><strong>Core line:</strong> Feel Your Future. Build the Life You Want.</p>
+              <p>
+                Coaching to help you reset your inner state — so choices, relationships, and direction begin to change naturally.
+              </p>
+
+              <h3>Colors</h3>
+              <p>Primary palette used across homepage, Awakening Path, and materials.</p>
+              <div class="palette">
+                <div class="swatch" style="background:var(--sage);">
+                  Deep Sage
+                  <small>#2F6F63</small>
+                </div>
+                <div class="swatch" style="background:var(--forest);">
+                  Forest Green
+                  <small>#2E5E4E</small>
+                </div>
+                <div class="swatch" style="background:var(--earth);">
+                  Earth Brown
+                  <small>#8B5E3C</small>
+                </div>
+                <div class="swatch" style="background:var(--gold); color:#3b2c0d;">
+                  Muted Gold
+                  <small>#D8A34A</small>
+                </div>
+                <div class="swatch" style="background:var(--coral);">
+                  Soft Coral Accent
+                  <small>#C7644F</small>
+                </div>
+              </div>
+
+              <h3>Typography & voice</h3>
+              <p><strong>Headlines:</strong> Playfair Display / Crimson Pro / Georgia-family serif.</p>
+              <p><strong>Body:</strong> Lato / Source Sans 3 / system sans (Segoe UI, Roboto etc.).</p>
+              <p>
+                <strong>Brand voice:</strong> Warm, grounded, and practical. The message should feel like guidance from someone who
+                understands life transitions — not sales language or hype.
+              </p>
+            </div>
+            <div class="card dev">
+              <div class="badge-row">
+                <span class="badge dev">Dev notes</span>
+              </div>
+              <h3>Implementation tokens</h3>
+              <p>Suggested design tokens consistently used across Cindy projects:</p>
+              <div class="mono">
+--color-sage: #2F6F63;
+--color-forest: #2E5E4E;
+--color-earth: #8B5E3C;
+--color-gold: #D8A34A;
+--color-coral: #C7644F;
+--color-cream: #F4EFE7;
+--radius-lg: 22px;
+--radius: 14px;
+--shadow-soft: 0 10px 26px rgba(0,0,0,.08);
+              </div>
+              <p class="small-text">
+                Keep buttons rounded, use soft shadows (no harsh drop shadows), and prefer warm off-white backgrounds over pure white for large sections.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Homepages -->
+        <section id="panel-homepages" class="tab-panel" role="tabpanel">
+          <div class="grid-2">
+            <div>
+              <h2>Homepage variants</h2>
+              <p><span class="pill-inline">For Cindy</span> These are options for how your public homepage can look and feel.</p>
+              <p>
+                All variants center on people rebuilding after transitions and starting with a low-pressure clarity consultation.
+              </p>
+
+              <div class="card">
+                <div class="badge-row">
+                  <span class="badge">Homepage Draft A</span>
+                  <span class="badge">Soft entry</span>
+                </div>
+                <h3>Flyer-style homepage</h3>
+                <p>
+                  Based on the simpler homepage file that highlights your three-part framework (Clarity, Alignment, Creation),
+                  packages, and a $33 clarity consultation.
+                </p>
+                <ul>
+                  <li><strong>Best for:</strong> quick, clear landing page or one-page site.</li>
+                  <li><strong>Key headline:</strong> “Feel your future. Build the life you want.”</li>
+                  <li><strong>Main CTAs:</strong> Start with a $33 Clarity Consultation; View packages.</li>
+                </ul>
+                <p class="small-text"><span class="pill-inline dev">Dev</span> Source: <code>index.html</code> and <code>New folder/index.html</code>.</p>
+              </div>
+
+              <div class="card">
+                <div class="badge-row">
+                  <span class="badge">Homepage Draft B</span>
+                  <span class="badge">Richer layout</span>
+                </div>
+                <h3>Full single-page site</h3>
+                <p>
+                  Includes sections for About, Services (coaching, retreats, talks), dynamic pricing cards, intake form, and footer contact.
+                </p>
+                <ul>
+                  <li><strong>Best for:</strong> full website experience with sections instead of a single flyer.</li>
+                  <li><strong>Key hero line:</strong> “Guide &amp; Coach for Real-Life Transformation.”</li>
+                  <li><strong>Primary buttons:</strong> View Offerings, Start with Intake, Book a Consultation.</li>
+                </ul>
+                <p class="small-text"><span class="pill-inline dev">Dev</span> Source: <code>cindy_homepage_index.html</code> and dynamic pricing via <code>pricing_products.json</code>.</p>
+              </div>
+            </div>
+            <div class="card dev">
+              <div class="badge-row">
+                <span class="badge dev">CTA guidance</span>
+              </div>
+              <h3>Canonical homepage CTAs</h3>
+              <ul>
+                <li><strong>Primary:</strong> “Start with a $33 Clarity Consultation.”</li>
+                <li><strong>Support:</strong> “View packages” / “View offerings”.</li>
+                <li><strong>Contact:</strong> “Email to book” or “Book a Consultation”.</li>
+              </ul>
+              <p>
+                Keep CTAs concrete and buyer-facing (what happens next) instead of vague “Contact us” language.
+                Pair buttons with one short helper line when needed.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Awakening Path -->
+        <section id="panel-awakening" class="tab-panel" role="tabpanel">
+          <div class="grid-2">
+            <div>
+              <h2>Awakening Path — deeper voice</h2>
+              <p><span class="pill-inline">For Cindy</span> This is your more direct, awakening-focused voice for people already questioning old patterns.</p>
+              <p>
+                It speaks to people who feel that life, or the world around them, no longer adds up — and who are ready to move from
+                confusion to clarity, and from clarity to action.
+              </p>
+
+              <h3>Key ideas from the page</h3>
+              <ul>
+                <li><strong>Direct philosophy:</strong> Many people have lived inside beliefs they never truly chose.</li>
+                <li><strong>The uncomfortable middle:</strong> Real transformation often means sitting with discomfort instead of escaping it.</li>
+                <li><strong>What this path is for:</strong> people stuck in loops, drowning in distraction, or feeling disconnected from their own truth.</li>
+                <li><strong>Goal:</strong> not to keep people comfortable inside patterns, but to help them learn to see and move differently.</li>
+              </ul>
+            </div>
+            <div class="card dev">
+              <div class="badge-row">
+                <span class="badge dev">Usage & lanes</span>
+              </div>
+              <h3>Where this voice belongs</h3>
+              <div class="columns">
+                <div>
+                  <p><strong>Soft entry lane</strong> (public, broad):</p>
+                  <ul>
+                    <li>Homepage headline and packages.</li>
+                    <li>Flyers and simple ads.</li>
+                    <li>Intro emails and booking pages.</li>
+                  </ul>
+                </div>
+                <div>
+                  <p><strong>Awakening Path lane</strong> (deeper):</p>
+                  <ul>
+                    <li>Long-form pages and blog posts.</li>
+                    <li>Talks, podcasts, and retreat materials.</li>
+                    <li>Follow-up content for people already engaged.</li>
+                  </ul>
+                </div>
+              </div>
+              <p class="small-text">
+                <span class="pill-inline dev">Dev</span> Source: <code>New folder/awakening/index.html</code>. Keep both lanes available; choose per context.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Offers & Pricing -->
+        <section id="panel-offers" class="tab-panel" role="tabpanel">
+          <h2>Offers & pricing</h2>
+          <p><span class="pill-inline">For Cindy</span> These are the current working packages and price points used across pages.</p>
+
+          <div class="grid-3" style="margin-top:10px;">
+            <div class="card">
+              <div class="badge-row">
+                <span class="badge">$33 consult</span>
+              </div>
+              <h3>Clarity Consultation</h3>
+              <p><strong>$33</strong> — intro clarity call to explore fit, goals, and next steps.</p>
+            </div>
+            <div class="card">
+              <h3>Single Session</h3>
+              <p><strong>$75</strong> — one 45-minute coaching session.</p>
+            </div>
+            <div class="card">
+              <h3>1 Month Prepaid</h3>
+              <p><strong>$272</strong> — 4 weekly sessions (best for focused season of work).</p>
+            </div>
+            <div class="card">
+              <h3>3 Months Prepaid</h3>
+              <p><strong>$720</strong> — weekly sessions, ideal for deeper pattern work.</p>
+            </div>
+            <div class="card">
+              <h3>6-Month Intensive</h3>
+              <p><strong>$2,880</strong> — 2× weekly + 3-day retreat (high-commitment container).</p>
+            </div>
+          </div>
+
+          <div class="columns" style="margin-top:14px;">
+            <div class="card">
+              <h3>Delivery modes</h3>
+              <ul>
+                <li>Zoom coaching sessions.</li>
+                <li>In-person sessions in Idaho (where available).</li>
+                <li>3-day retreats for deeper work.</li>
+                <li>Talks & workshops on conditioning, liberation, and fulfillment.</li>
+              </ul>
+            </div>
+            <div class="card dev">
+              <div class="badge-row">
+                <span class="badge dev">Dev notes</span>
+              </div>
+              <p>
+                Pricing is rendered two ways in existing files:
+              </p>
+              <ul>
+                <li>Static cards in homepage/flyer HTML.</li>
+                <li>Dynamic cards from <code>pricing_products.json</code> (JS populates pricing grid).</li>
+              </ul>
+              <p class="small-text">
+                Treat this tab as canonical for <em>names</em>, <em>descriptions</em>, and <em>relative structure</em>.
+                For live sites, keep the JSON pricing in sync with these values.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Coaching Agreement -->
+        <section id="panel-agreement" class="tab-panel" role="tabpanel">
+          <h2>Coaching agreement — inline text</h2>
+          <p><span class="pill-inline">For Cindy</span> This is a readable version of your current agreement to review and adjust before turning into a final PDF or e-sign document.</p>
+
+          <div class="agreement">
+            <h3>Coaching Agreement</h3>
+            <p><strong>Effective Date:</strong> 2026-02-26</p>
+            <p><strong>Parties:</strong></p>
+            <ul>
+              <li><strong>Coach:</strong> Cindy Santi (“Coach”)</li>
+              <li><strong>Client:</strong> [Client Name] (“Client”)</li>
+            </ul>
+
+            <h3>1. Services</h3>
+            <p>
+              Coach provides coaching services via Zoom, in-person (Idaho), and at retreats. Coaching focuses on personal development
+              and is not therapy, medical treatment, or financial/legal advice.
+            </p>
+
+            <h3>2. Fees &amp; Payment</h3>
+            <p>
+              Fees are based on the package selected (consultation, single session, or prepaid packages). Prepaid fees are due prior
+              to the first session in a package unless otherwise agreed in writing.
+            </p>
+
+            <h3>3. Cancellation &amp; Refunds</h3>
+            <p>
+              Client may cancel or reschedule a session with at least 48 hours’ notice. Sessions cancelled with less than 48 hours’
+              notice may be counted as used. Prepaid package fees are not refundable once the package has begun.
+            </p>
+
+            <h3>4. Confidentiality</h3>
+            <p>
+              Coach will keep client information confidential except as required by law (for example, in cases of suspected abuse,
+              risk of harm, or when legally compelled). Client understands that electronic communication carries inherent privacy risks.
+            </p>
+
+            <h3>5. Liability</h3>
+            <p>
+              Coaching is not a substitute for medical, psychological, or other professional care. Client is responsible for their own
+              decisions and actions. To the fullest extent permitted by law, Coach is not liable for any outcomes resulting from
+              coaching sessions.
+            </p>
+
+            <h3>6. Governing Law</h3>
+            <p>
+              This Agreement is governed by the laws of the State of Idaho, USA.
+            </p>
+
+            <h3>7. Signatures</h3>
+            <p>Client: _____________________________ &nbsp; Date: ____________</p>
+            <p>Coach: &nbsp; _____________________________ &nbsp; Date: ____________</p>
+          </div>
+
+          <p class="small-text" style="margin-top:10px;">
+            <span class="pill-inline dev">Dev</span> Source language from <code>coaching_agreement_cindy_santi.pdf</code>. For production,
+            mirror any legal edits here into the final PDF or e-sign template.
+          </p>
+        </section>
+
+        <!-- Tools (Devs) -->
+        <section id="panel-tools" class="tab-panel" role="tabpanel">
+          <div class="grid-2">
+            <div>
+              <h2>Tools & assets</h2>
+              <p><span class="pill-inline">For Cindy</span> These are behind-the-scenes tools and files that support your site and content.</p>
+
+              <div class="card">
+                <div class="badge-row">
+                  <span class="badge">CTA / Post generator</span>
+                </div>
+                <h3>CTA Button Generator (AeroVista tool)</h3>
+                <p>
+                  A single-file, offline tool that generates website headlines, button labels, and Facebook-ready post variants based on your offering.
+                </p>
+                <ul>
+                  <li><strong>Input:</strong> what you offer, who it’s for, tone, primary next step.</li>
+                  <li><strong>Output:</strong> several CTA buttons, helper lines, and multiple post variants (short / medium / long / DM-first).</li>
+                  <li><strong>Usage:</strong> copy/paste options you like into your site, flyers, or social posts.</li>
+                </ul>
+                <p class="small-text"><span class="pill-inline dev">Dev</span> Source file: <code>fb ready.html</code> (pure HTML+CSS+JS, no backend).</p>
+              </div>
+
+              <div class="card">
+                <div class="badge-row">
+                  <span class="badge">Visual assets</span>
+                </div>
+                <h3>Key assets</h3>
+                <ul>
+                  <li><code>flyer_v3.png</code> — current flyer artwork used on homepage and in downloads.</li>
+                  <li><code>cindy_upgraded_emblem_v2_fixed.svg</code> — emblem logo used in homepage hero and footer.</li>
+                  <li><code>pricing_products.json</code> — JSON mapping SKUs to prices/descriptions for dynamic pricing grid.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card dev">
+              <div class="badge-row">
+                <span class="badge dev">Dev notes</span>
+              </div>
+              <h3>Implementation considerations</h3>
+              <ul>
+                <li>Keep this file out of production routes; it is a working reference only.</li>
+                <li>When building real pages, pull copy and structure from the relevant tabs here.</li>
+                <li>Use the Brand Kit tab as the source for CSS variables and design tokens.</li>
+                <li>Ensure booking links (Square/Calendly) replace placeholder mailto links when ready.</li>
+              </ul>
+              <p class="small-text">
+                Future idea: turn this into a small internal style guide site with navigation and version notes, while public pages stay lean.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    (function(){
+      const tabs = document.querySelectorAll(".tab-btn");
+      const panels = document.querySelectorAll(".tab-panel");
+      function activate(id){
+        tabs.forEach(btn => {
+          const match = btn.getAttribute("data-tab") === id;
+          btn.classList.toggle("active", match);
+          btn.setAttribute("aria-selected", match ? "true" : "false");
+        });
+        panels.forEach(panel => {
+          panel.classList.toggle("active", panel.id === "panel-" + id);
+        });
+      }
+      tabs.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const id = btn.getAttribute("data-tab");
+          if (id) activate(id);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
+
